@@ -1,0 +1,12 @@
+D:\PetProjects\C#\AspNetCore\TestMMZ\db\bin\Debug\net7.0\db.deps.json
+D:\PetProjects\C#\AspNetCore\TestMMZ\db\bin\Debug\net7.0\db.dll
+D:\PetProjects\C#\AspNetCore\TestMMZ\db\bin\Debug\net7.0\db.pdb
+D:\PetProjects\C#\AspNetCore\TestMMZ\db\obj\Debug\net7.0\db.csproj.AssemblyReference.cache
+D:\PetProjects\C#\AspNetCore\TestMMZ\db\obj\Debug\net7.0\db.GeneratedMSBuildEditorConfig.editorconfig
+D:\PetProjects\C#\AspNetCore\TestMMZ\db\obj\Debug\net7.0\db.AssemblyInfoInputs.cache
+D:\PetProjects\C#\AspNetCore\TestMMZ\db\obj\Debug\net7.0\db.AssemblyInfo.cs
+D:\PetProjects\C#\AspNetCore\TestMMZ\db\obj\Debug\net7.0\db.csproj.CoreCompileInputs.cache
+D:\PetProjects\C#\AspNetCore\TestMMZ\db\obj\Debug\net7.0\db.dll
+D:\PetProjects\C#\AspNetCore\TestMMZ\db\obj\Debug\net7.0\refint\db.dll
+D:\PetProjects\C#\AspNetCore\TestMMZ\db\obj\Debug\net7.0\db.pdb
+D:\PetProjects\C#\AspNetCore\TestMMZ\db\obj\Debug\net7.0\ref\db.dll

@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "ucNusgOUnzlXER342poPpvq3ajEmYvyXGS8i0foBHJM=",
+  "Source": "TestMMZ",
+  "BasePath": "_content/TestMMZ",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TestMMZ\\wwwroot",
+      "Source": "TestMMZ",
+      "ContentRoot": "D:\\PetProjects\\C#\\AspNetCore\\TestMMZ\\TestMMZ\\wwwroot\\",
+      "BasePath": "_content/TestMMZ",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\PetProjects\\C#\\AspNetCore\\TestMMZ\\TestMMZ\\wwwroot\\html\\index.html",
+      "SourceId": "TestMMZ",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PetProjects\\C#\\AspNetCore\\TestMMZ\\TestMMZ\\wwwroot\\",
+      "BasePath": "_content/TestMMZ",
+      "RelativePath": "html/index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\index.html"
+    },
+    {
+      "Identity": "D:\\PetProjects\\C#\\AspNetCore\\TestMMZ\\TestMMZ\\wwwroot\\html\\login.html",
+      "SourceId": "TestMMZ",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PetProjects\\C#\\AspNetCore\\TestMMZ\\TestMMZ\\wwwroot\\",
+      "BasePath": "_content/TestMMZ",
+      "RelativePath": "html/login.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\login.html"
+    }
+  ]
+}

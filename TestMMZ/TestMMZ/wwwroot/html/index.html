@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Главная страница</title>
+
+    <style type="text/css">
+        table {
+            width: 300px; 
+            border-collapse: collapse; 
+        }
+
+        td, th {
+            padding: 3px; 
+            border: 1px solid black; 
+        }
+    </style>
+</head>
+<body>
+    <p>Изделие</p>
+    <div id="myDropdown">
+        <input type="text" placeholder="Поиск.." id="myInput" onkeyup="filterFunction()">
+    </div>
+    <div>
+        <p>Детали</p>
+        <table>
+            <thead>
+                <tr><th>№ п/п</th><th>Обозначение</th><th>Наименование</th></tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        window.onload = start;
+
+        async function start() {
+            const response = await fetch("/get-all-products", {
+                method: "GET",
+                headers: { "Accept": "application/json", "Content-Type": "application/json" },
+            });
+            if (response.ok === true) {
+                const products = await response.json();
+                console.log(23);
+                console.log(products);
+                for (let product in products) {
+                    document.getElementById("myDropdown").appendChild(addHref(product, products[product]));
+                }
+            }
+        }
+
+        async function getAllDetails(oboz) {
+            const response = await fetch(`/get-all-details/${oboz}`, {
+                method: "GET",
+                headers: { "Accept": "application/json", "Content-Type": "application/json" },
+            });
+            if (response.ok === true) {
+                let tbody = document.getElementById("tbody");
+                tbody.innerHTML = "";
+
+                const details = await response.json();
+                let i = 1;
+                for (let detail in details) {
+                    document.getElementById("tbody").appendChild(addDetail(detail, details[detail], i));
+                    i++;
+                }
+            }
+        }
+
+        function addDetail(oboz, name, number) {
+            const tr = document.createElement("tr");
+
+            const numberTd = document.createElement("td");
+            numberTd.append(number);
+            tr.append(numberTd);
+
+            const obozTd = document.createElement("td");
+            obozTd.append(oboz);
+            tr.append(obozTd)
+
+            const nameTd = document.createElement("td");
+            nameTd.append(name);
+            tr.append(nameTd);
+
+            return tr;
+        }
+
+        function addHref(oboz, name) {
+            const p = document.createElement("p");
+            const button = document.createElement("button");
+            button.innerText = `${oboz} - ${name}`
+            button.addEventListener("click", async () => await getAllDetails(oboz));
+            p.appendChild(button);
+            return p;
+        }
+
+        function filterFunction() {
+            let input = document.getElementById("myInput");
+            let div = document.getElementById("myDropdown");
+
+            let filter = input.value.toUpperCase();
+            let buttons = div.getElementsByTagName("button");
+
+            for (let i = 0; i < buttons.length; i++) {
+                value = buttons[i].innerText;
+                if (value.toUpperCase().indexOf(filter) > -1) {
+                    buttons[i].style.display = "";
+                } else {
+                    buttons[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
